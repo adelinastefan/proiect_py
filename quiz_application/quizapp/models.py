@@ -1,0 +1,11 @@
+from django.db import models
+
+class Questions (models.Model):
+    question = models.CharField(max_length=350, null=True)
+    option_1 = models.CharField(max_length=350, null=True)
+    option_2 = models.CharField(max_length=350, null=True)
+    option_3 = models.CharField(max_length=350, null=True)
+    answer = models.CharField(max_length=350, null=True)
+
+    def __str__(self):
+        return self.question

@@ -1,0 +1,11 @@
+{% extends 'quizapp/first.html' %}
+{% load static %}
+{% block content %}
+<div class="container jumbotron">
+    <form method="POST" action="" >
+        {{form.as_p}}
+
+        <input class="btn btn-success btn-lg" type="submit" value="Register Account">
+    </form>
+</div>
+{% endblock %}

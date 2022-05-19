@@ -1,0 +1,21 @@
+{% extends 'quizapp/first.html' %}
+
+{% block content %}
+
+<div class="container ">
+
+    <div class="card-columns" style="padding: 20px; margin: 40px;">
+        <div class="card" align="centre " style="width: 30rem; border:10px black solid">
+            <img class="results.jpg" src="{%static 'results.jpg' %}" alt="results">
+            <div class="card-body">
+                <h5 class="card-title">Score: {{score}}</h5>
+                <p class="card-text">Correct answers: {{true}}</p>
+                <p class="card-text"> Wrong answers: {{false}}</p>
+                <p class="card-text">Total questions: {{total}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

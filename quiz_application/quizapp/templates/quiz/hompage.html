@@ -1,0 +1,39 @@
+{% extends 'quizapp/first.html' %}
+
+{% block content %}
+{% load static %}
+<div class="container ">
+<h1>Quiz App</h1>
+
+ <form method='post' action=''>
+    {% for q  in questions%}
+    <div class="form-group">
+      <label class="questions">{{q.question}}</label>
+    </div>
+    <div class="form-check">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{q.question}}" id="gridRadios12" value="option1" checked>
+            <label class="form-check-label" for="gridRadios12">
+                {{q.option1}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{q.question}}" id="gridRadios123" value="option2">
+            <label class="form-check-label" for="gridRadios123">
+                {{q.option2}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{q.question}}" id="gridRadios" value="option3">
+            <label class="form-check-label" for="gridRadios">
+                {{q.option3}}
+            </label>
+        </div>
+        <br>
+    </div>
+    {% endfor %}
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+  </form>
+</div>
+{% endblock %}
